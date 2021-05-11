@@ -18,7 +18,7 @@
     
     
       
-        <title>Percona Distribution for PostgreSQL 13 Documentation - Percona Distribution for PostgreSQL</title>
+        <title>Minor Upgrade of Percona Distribution for PostgreSQL - Percona Distribution for PostgreSQL</title>
       
     
     
@@ -43,8 +43,6 @@
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.3/css/line.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-      <link rel="stylesheet" href="css/version-menu.css">
     
       <link rel="stylesheet" href="css/toctree.css">
     
@@ -77,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#percona-distribution-for-postgresql-13-documentation" class="md-skip">
+        <a href="#minor-upgrade-of-percona-distribution-for-postgresql" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Percona Distribution for PostgreSQL 13 Documentation
+              Minor Upgrade of Percona Distribution for PostgreSQL
             
           </span>
         </div>
@@ -192,6 +190,24 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+ 
+
+  <div class="md-flex__cell md-flex__cell--shrink dropdown">
+    <button class="dropdownbutton">Versions</button>
+    <div class="dropdown-content md-hero">
+          <a title="11" href="https://postgresql-docs-11.netlify.app/">11</a>
+      
+          <a title="12" href="https://postgresql-docs-12.netlify.app/">12</a>
+      
+          <a title="13" href="https://postgresql-docs-13.netlify.app/">13</a>
+      
+          <a title="Latest" href="https://www.percona.com/doc/postgresql/LATEST/index.html">Latest</a>
+      }
+     </div>
+ </div>
+ 
+
+ 
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -231,49 +247,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          <span class="md-nav__icon md-icon"></span>
-          
-            <a href="index.html" class="md-nav__link md-nav__link--active"
-              style="margin: initial; padding: initial; pointer-events: initial">
-          
-            Percona Distribution for PostgreSQL 13 Documentation
-          </a>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Percona Distribution for PostgreSQL 13 Documentation
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -284,12 +262,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
@@ -327,11 +307,49 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="minor-upgrade.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-nav__icon md-icon"></span>
+          
+            <a href="minor-upgrade.html" class="md-nav__link md-nav__link--active"
+              style="margin: initial; padding: initial; pointer-events: initial">
+          
+            Minor Upgrade of Percona Distribution for PostgreSQL
+          </a>
+        </label>
+      
+      <a href="minor-upgrade.html" class="md-nav__link md-nav__link--active">
         Minor Upgrade of Percona Distribution for PostgreSQL
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -524,82 +542,69 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/percona/postgresql-docs/edit/13/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/percona/postgresql-docs/edit/13/docs/minor-upgrade.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="percona-distribution-for-postgresql-13-documentation">Percona Distribution for PostgreSQL 13 Documentation<a class="headerlink" href="#percona-distribution-for-postgresql-13-documentation" title="Permanent link">&para;</a></h1>
-<p>Percona Distribution for PostgreSQL is a collection of tools to assist you in managing your PostgreSQL
-database system: it installs PostgreSQL and complements it by a selection of
-extensions that enable solving essential practical tasks efficiently:</p>
-<ul>
-<li>
-<p><a href="https://github.com/reorg/pg_repack">pg_repack</a> rebuilds
-PostgreSQL database objects</p>
-</li>
-<li>
-<p><a href="https://www.pgaudit.org/">pgaudit</a> provides detailed session or object
-audit logging via the standard PostgreSQL logging facility</p>
-</li>
-<li>
-<p><a href="https://pgbackrest.org/">pgBackRest</a> is a backup and restore solution for
-PostgreSQL</p>
-</li>
-<li>
-<p><a href="https://patroni.readthedocs.io/en/latest/">Patroni</a> is an HA (High Availability) solution for PostgreSQL.</p>
-</li>
-<li>
-<p><a href="https://github.com/percona/pg_stat_monitor">pg_stat_monitor</a> (Tech Preview Feature <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>) collects and aggregates statistics for PostgreSQL and provides histogram information.</p>
-</li>
-<li>
-<p>A collection of <a href="https://www.postgresql.org/docs/13/contrib.html">additional PostgreSQL contrib extensions</a></p>
-</li>
-</ul>
-<div class="admonition seealso">
-<p class="admonition-title">Seealso</p>
-<p>Blog Posts</p>
-<ul>
-<li><a href="https://www.percona.com/blog/2019/05/10/pgbackrest-a-great-backup-solution-and-a-wonderful-year-of-growth/">pgBackRest - A Great Backup Solution and a Wonderful Year of
-  Growth</a></li>
-<li><a href="https://www.percona.com/blog/2018/09/21/securing-postgresql-as-an-enterprise-grade-environment/">Securing PostgreSQL as an Enterprise-Grade
-  Environment</a></li>
-</ul>
-</div>
-<p>Percona Distribution for PostgreSQL is also shipped with the
-<a href="https://www.postgresql.org/docs/11/libpq.html">libpq</a> library. It
-contains &ldquo;a set of library functions that allow client programs to pass
-queries to the PostgreSQL backend server and to receive the results of
-these queries.&rdquo; <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<h1 id="installation-and-upgrade">Installation and Upgrade<a class="headerlink" href="#installation-and-upgrade" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="installing">Installing Percona Distribution for PostgreSQL</a></li>
-<li><a href="minor-upgrade">Minor Upgrade of Percona Distribution for PostgreSQL</a></li>
-</ul>
-<h1 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h1>
-<p><a href="pg-stat-monitor">pg_stat_monitor</a></p>
-<h1 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h1>
-<p><a href="uninstalling">Uninstalling Percona Distribution for PostgreSQL</a></p>
-<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
-<p><a href="release-notes">Release notes</a></p>
-<h1 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h1>
-<p><a href="licensing">Licening</a></p>
-<div class="footnote">
-<hr />
+                <h1 id="minor-upgrade-of-percona-distribution-for-postgresql">Minor Upgrade of Percona Distribution for PostgreSQL<a class="headerlink" href="#minor-upgrade-of-percona-distribution-for-postgresql" title="Permanent link">&para;</a></h1>
+<p>Minor releases of PostgreSQL include bug fixes and feature enhancements. We recommend that you keep your Percona Distribution for PostgreSQL updated to the latest minor version.</p>
+<p>Though minor upgrades do not change the behavior, we recommend you to back up your data first, in order to be on the safe side.</p>
+<p>Minor upgrade of Percona Distribution for PostgreSQL includes the following steps:</p>
 <ol>
-<li id="fn:1">
-<p>Tech Preview Features are not yet ready for enterprise use and are
-not included in support via . They are included in this release so
-that users can provide feedback prior to the full release of the
-feature in a future release (or removal of the feature if it is
-deemed not useful). This functionality can change (APIs, CLIs, etc.)
-from tech preview to GA.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li>
+<p>Stopping the <code>postgresql</code> cluster;</p>
 </li>
-<li id="fn:2">
-<p><a href="https://www.postgresql.org/docs/11/libpq.html">https://www.postgresql.org/docs/11/libpq.html</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li>
+<p>Installing new version packages;</p>
+</li>
+<li>
+<p>Restarting the <code>postgresql</code> cluster.</p>
 </li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These steps apply if you installed Percona Distribution for PostgreSQL from the Major Release repository. In this case, you are always upgraded to the latest available release.</p>
+<p>If you installed Percona Distribution for PostgreSQL from the Minor Release repository, you will need to enable a new version repository to upgrade.</p>
+<p>For more information about Percona repositories, refer to Installing Percona Distribution for PostgreSQL.</p>
+<p>Before the upgrade, update the <strong>percona-release</strong> utility to the latest version. This is required to install the new version packages of Percona Distribution for PostgreSQL. Refer to <a href="https://www.percona.com/doc/percona-repo-config/percona-release.html#updating-percona-release-to-the-latest-version">Percona Software Repositories Documentation</a> for update instructions.</p>
 </div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Run all commands as root or via <strong>sudo</strong>.</p>
+</div>
+<ol>
+<li>
+<p>Stop the <code>postgresql</code> service.</p>
+<ul>
+<li>On Debian / Ubuntu:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql.service
+</code></pre></div>
+<ul>
+<li>On Red Hat Enterprise Linux / CentOS:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql-13
+</code></pre></div>
+</li>
+<li>
+<p>Install new version packages. See <a href="installing.html">Installing Percona Distribution for PostgreSQL</a>.</p>
+</li>
+<li>
+<p>Restart the <code>postgresql</code> service.</p>
+<ul>
+<li>On Debian / Ubuntu:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl start postgresql.service
+</code></pre></div>
+<ul>
+<li>On Red Hat Enterprise Linux / CentOS:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl start postgresql-13
+</code></pre></div>
+</li>
+</ol>
+<p>If you wish to upgrade Percona Distribution for PostgreSQL to the major version, refer to <a href="major-upgrade.html">Upgrading Percona Distribution for PostgreSQL from 12 to 13</a>.</p>
                 
                   
                     
@@ -608,7 +613,7 @@ from tech preview to GA.&#160;<a class="footnote-backref" href="#fnref:1" title=
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-21
+      Last update: 2021-04-28
     
   </small>
 </div>
@@ -635,14 +640,28 @@ from tech preview to GA.&#160;<a class="footnote-backref" href="#fnref:1" title=
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        <a href="major-upgrade.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Upgrading Percona Distribution for PostgreSQL from 12 to 13
+            </div>
+          </div>
+        </a>
       
-        <a href="installing.html" class="md-footer__link md-footer__link--next" rel="next">
+      
+        <a href="pg-stat-monitor.html" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Installation and Upgrade
+              Extensions
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -679,8 +698,6 @@ from tech preview to GA.&#160;<a class="footnote-backref" href="#fnref:1" title=
     
     
       <script src="assets/javascripts/bundle.4ea5477f.min.js"></script>
-      
-        <script src="js/version_dropdown.js"></script>
       
     
   </body>

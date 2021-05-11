@@ -18,7 +18,7 @@
     
     
       
-        <title>Uninstall - Percona Distribution for PostgreSQL</title>
+        <title>Release Notes - Percona Distribution for PostgreSQL</title>
       
     
     
@@ -43,8 +43,6 @@
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.3/css/line.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    
-      <link rel="stylesheet" href="css/version-menu.css">
     
       <link rel="stylesheet" href="css/toctree.css">
     
@@ -77,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uninstalling-percona-distribution-for-postgresql" class="md-skip">
+        <a href="#release-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Uninstall
+              Release Notes
             
           </span>
         </div>
@@ -192,6 +190,24 @@
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
+ 
+
+  <div class="md-flex__cell md-flex__cell--shrink dropdown">
+    <button class="dropdownbutton">Versions</button>
+    <div class="dropdown-content md-hero">
+          <a title="11" href="https://postgresql-docs-11.netlify.app/">11</a>
+      
+          <a title="12" href="https://postgresql-docs-12.netlify.app/">12</a>
+      
+          <a title="13" href="https://postgresql-docs-13.netlify.app/">13</a>
+      
+          <a title="Latest" href="https://www.percona.com/doc/postgresql/LATEST/index.html">Latest</a>
+      }
+     </div>
+ </div>
+ 
+
+ 
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -325,63 +341,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          <span class="md-nav__icon md-icon"></span>
-          
-            <a href="uninstalling.html" class="md-nav__link md-nav__link--active"
-              style="margin: initial; padding: initial; pointer-events: initial">
-          
-            Uninstall
-          </a>
-        </label>
-      
-      <a href="uninstalling.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="uninstalling.html" class="md-nav__link">
         Uninstall
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#on-debian-and-ubuntu-using-apt" class="md-nav__link">
-    On Debian and Ubuntu using apt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#on-red-hat-enterprise-linux-and-centos-using-yum" class="md-nav__link">
-    On Red Hat Enterprise Linux and CentOS using yum
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -392,17 +356,19 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       <label class="md-nav__link" for="__nav_5">
         <span class="md-nav__icon md-icon"></span>
         
-          <a href="release-notes.html" class="md-nav__link"
+          <a href="release-notes.html" class="md-nav__link md-nav__link--active"
             style="margin: initial; padding: initial; pointer-events: initial">
         
           Release Notes
@@ -412,7 +378,7 @@
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           
-            <a href="release-notes.html" class="md-nav__link"
+            <a href="release-notes.html" class="md-nav__link md-nav__link--active"
               style="margin: initial; padding: initial; pointer-events: initial">
           
             Release Notes
@@ -526,20 +492,6 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#on-debian-and-ubuntu-using-apt" class="md-nav__link">
-    On Debian and Ubuntu using apt
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#on-red-hat-enterprise-linux-and-centos-using-yum" class="md-nav__link">
-    On Red Hat Enterprise Linux and CentOS using yum
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -552,56 +504,26 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/percona/postgresql-docs/edit/13/docs/uninstalling.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/percona/postgresql-docs/edit/13/docs/release-notes.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="uninstalling-percona-distribution-for-postgresql">Uninstalling Percona Distribution for PostgreSQL<a class="headerlink" href="#uninstalling-percona-distribution-for-postgresql" title="Permanent link">&para;</a></h1>
-<p>To uninstall Percona Distribution for PostgreSQL, remove all the installed packages and data / configuration files.</p>
-<p><strong>NOTE</strong>: Should you need the data files later, back up your data before uninstalling Percona Distribution for PostgreSQL.</p>
-<h2 id="on-debian-and-ubuntu-using-apt">On Debian and Ubuntu using <code>apt</code><a class="headerlink" href="#on-debian-and-ubuntu-using-apt" title="Permanent link">&para;</a></h2>
-<p>To uninstall Percona Distribution for PostgreSQL on platforms that use <strong>apt</strong> package manager such as Debian
-or Ubuntu, complete the following steps.</p>
-<p>Run all commands as root or via <strong>sudo</strong>.</p>
-<ol>
+                <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<ul>
 <li>
-<p>Stop the Percona Distribution for PostgreSQL service.</p>
-<div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql.service
-</code></pre></div>
+<p><a href="release-notes-v13.2.upd.html">Percona Distribution for PostgreSQL 13.2 Update</a></p>
 </li>
 <li>
-<p>Remove the <strong>percona-postgresql</strong> packages.</p>
-<div class="highlight"><pre><span></span><code>$ sudo apt-get remove percona-postgresql-13* percona-pgbackrest percona-patroni percona-pg-stat-monitor13
-</code></pre></div>
+<p><a href="release-notes-v13.2.html">Percona Distribution for PostgreSQL 13.2</a></p>
 </li>
 <li>
-<p>Remove configuration and data files.</p>
-<div class="highlight"><pre><span></span><code>$ rm -rf /etc/postgresql/13/main
-</code></pre></div>
-</li>
-</ol>
-<h2 id="on-red-hat-enterprise-linux-and-centos-using-yum">On Red Hat Enterprise Linux and CentOS using <code>yum</code><a class="headerlink" href="#on-red-hat-enterprise-linux-and-centos-using-yum" title="Permanent link">&para;</a></h2>
-<p>To uninstall Percona Distribution for PostgreSQL on platforms that use <strong>yum</strong> package manager such as
-Red Hat Enterprise Linux or CentOS, complete the following steps.</p>
-<p>Run all commands as root or via <strong>sudo</strong>.</p>
-<ol>
-<li>
-<p>Stop the Percona Distribution for PostgreSQL service.</p>
-<div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql-13
-</code></pre></div>
+<p><a href="release-notes-v13.1.html">Percona Distribution for PostgreSQL 13.1</a></p>
 </li>
 <li>
-<p>Remove the <strong>percona-postgresql</strong> packages</p>
-<div class="highlight"><pre><span></span><code>$ sudo yum remove percona-postgresql13*
-</code></pre></div>
+<p><a href="release-notes-v13.0.html">Percona Distribution for PostgreSQL 13.0</a></p>
 </li>
-<li>
-<p>Remove configuration and data files</p>
-<div class="highlight"><pre><span></span><code>$ rm -rf /var/lib/pgsql/13/data
-</code></pre></div>
-</li>
-</ol>
+</ul>
                 
                   
                     
@@ -637,7 +559,7 @@ Red Hat Enterprise Linux or CentOS, complete the following steps.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="pg-stat-monitor.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="uninstalling.html" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -646,19 +568,19 @@ Red Hat Enterprise Linux or CentOS, complete the following steps.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Extensions
+              Uninstall
             </div>
           </div>
         </a>
       
       
-        <a href="release-notes.html" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="release-notes-v13.0.html" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Release Notes
+              Percona Distribution for PostgreSQL 13.0
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -695,8 +617,6 @@ Red Hat Enterprise Linux or CentOS, complete the following steps.</p>
     
     
       <script src="assets/javascripts/bundle.4ea5477f.min.js"></script>
-      
-        <script src="js/version_dropdown.js"></script>
       
     
   </body>
