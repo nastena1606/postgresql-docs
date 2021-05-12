@@ -425,80 +425,8 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.2
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.3
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4 Update
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.5.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.5
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Update
+      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Third Update
       </a>
     </li>
   
@@ -510,7 +438,7 @@
   
     <li class="md-nav__item">
       <a href="release-notes-v12.6.upd2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Second Update
+        Percona Distribution for PostgreSQL 12.6 Second Update
       </a>
     </li>
   
@@ -521,8 +449,80 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Third Update
+      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.6.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.5.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.2.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.2
       </a>
     </li>
   
@@ -613,39 +613,43 @@
 or Ubuntu, complete the following steps.</p>
 <p>Run all commands as root or via <strong>sudo</strong>.</p>
 <ol>
-<li>Stop the Percona Distribution for PostgreSQL service.</li>
-</ol>
+<li>
+<p>Stop the Percona Distribution for PostgreSQL service.</p>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql.service
 </code></pre></div>
-<ol>
-<li>Remove the <strong>percona-postgresql</strong> packages.</li>
-</ol>
+</li>
+<li>
+<p>Remove the <strong>percona-postgresql</strong> packages.</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get remove percona-postgresql-12* percona-pgbackrest percona-patroni percona-pg-stat-monitor12
 </code></pre></div>
-<ol>
-<li>Remove configuration and data files.</li>
-</ol>
+</li>
+<li>
+<p>Remove configuration and data files.</p>
 <div class="highlight"><pre><span></span><code>$ rm -rf /etc/postgresql/12/main
 </code></pre></div>
+</li>
+</ol>
 <h2 id="on-red-hat-enterprise-linux-and-centos-using-yum">On Red Hat Enterprise Linux and CentOS using <code>yum</code><a class="headerlink" href="#on-red-hat-enterprise-linux-and-centos-using-yum" title="Permanent link">&para;</a></h2>
 <p>To uninstall Percona Distribution for PostgreSQL on platforms that use <strong>yum</strong> package manager such as
 Red Hat Enterprise Linux or CentOS, complete the following steps.</p>
 <p>Run all commands as root or via <strong>sudo</strong>.</p>
 <ol>
-<li>Stop the Percona Distribution for PostgreSQL service.</li>
-</ol>
+<li>
+<p>Stop the Percona Distribution for PostgreSQL service.</p>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql-12
 </code></pre></div>
-<ol>
-<li>Remove the <strong>percona-postgresql</strong> packages</li>
-</ol>
+</li>
+<li>
+<p>Remove the <strong>percona-postgresql</strong> packages</p>
 <div class="highlight"><pre><span></span><code>$ sudo yum remove percona-postgresql12*
 </code></pre></div>
-<ol>
-<li>Remove configuration and data files</li>
-</ol>
+</li>
+<li>
+<p>Remove configuration and data files</p>
 <div class="highlight"><pre><span></span><code>$ rm -rf /var/lib/pgsql/12/data
 </code></pre></div>
+</li>
+</ol>
                 
                   
                     

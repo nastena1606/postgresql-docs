@@ -413,80 +413,8 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.2
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.3
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4 Update
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.5.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.5
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Update
+      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Third Update
       </a>
     </li>
   
@@ -498,7 +426,7 @@
   
     <li class="md-nav__item">
       <a href="release-notes-v12.6.upd2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Second Update
+        Percona Distribution for PostgreSQL 12.6 Second Update
       </a>
     </li>
   
@@ -509,8 +437,80 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Third Update
+      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.6.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.5.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.2.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.2
       </a>
     </li>
   
@@ -594,48 +594,49 @@
 <p>Restarting the <code>postgresql</code> cluster.</p>
 </li>
 </ol>
-<p><strong>NOTE</strong>: These steps apply if you installed Percona Distribution for PostgreSQL from the Major Release repository. In this case, you are always upgraded to the latest available release.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These steps apply if you installed Percona Distribution for PostgreSQL from the Major Release repository. In this case, you are always upgraded to the latest available release.</p>
 <p>If you installed Percona Distribution for PostgreSQL from the Minor Release repository, you will need to enable a new version repository to upgrade.</p>
 <p>For more information about Percona repositories, refer to Installing Percona Distribution for PostgreSQL.</p>
 <p>Before the upgrade, update the <strong>percona-release</strong> utility to the latest version. This is required to install the new version packages of Percona Distribution for PostgreSQL. Refer to <a href="https://www.percona.com/doc/percona-repo-config/percona-release.html#updating-percona-release-to-the-latest-version">Percona Software Repositories Documentation</a> for update instructions.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Run all commands as root or via <strong>sudo</strong>.</p>
+</div>
 <ol>
 <li>
 <p>Stop the <code>postgresql</code> service.</p>
 <ul>
 <li>On Debian / Ubuntu:</li>
 </ul>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql.service
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>* On Red Hat Enterprise Linux / CentOS:
-</code></pre></div>
-<blockquote>
+<ul>
+<li>On Red Hat Enterprise Linux / CentOS:</li>
+</ul>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl stop postgresql-12
 </code></pre></div>
-</blockquote>
-<ol>
+</li>
 <li>
-<p>Install new version packages. See Installing Percona Distribution for PostgreSQL.</p>
+<p>Install new version packages. See <a href="installing.html">Installing Percona Distribution for PostgreSQL</a>.</p>
 </li>
 <li>
 <p>Restart the <code>postgresql</code> service.</p>
 <ul>
 <li>On Debian / Ubuntu:</li>
 </ul>
-</li>
-</ol>
-<blockquote>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl start postgresql.service
 </code></pre></div>
-</blockquote>
-<div class="highlight"><pre><span></span><code>* On Red Hat Enterprise Linux / CentOS:
+<ul>
+<li>On Red Hat Enterprise Linux / CentOS:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo systemctl start postgresql-13
 </code></pre></div>
-<blockquote>
-<div class="highlight"><pre><span></span><code>$ sudo systemctl start postgresql-12
-</code></pre></div>
-</blockquote>
-<p>If you wish to upgrade Percona Distribution for PostgreSQL to the major version, refer to Upgrading Percona Distribution for PostgreSQL from 11 to 12.</p>
+</li>
+</ol>
+<p>If you wish to upgrade Percona Distribution for PostgreSQL to the major version, refer to <a href="major-upgrade.html">Upgrading Percona Distribution for PostgreSQL from 11 to 12</a>.</p>
                 
                   
                     

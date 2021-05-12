@@ -439,80 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.2
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.3
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.4 Update
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.5.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.5
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Update
+      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Third Update
       </a>
     </li>
   
@@ -524,7 +452,7 @@
   
     <li class="md-nav__item">
       <a href="release-notes-v12.6.upd2.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Second Update
+        Percona Distribution for PostgreSQL 12.6 Second Update
       </a>
     </li>
   
@@ -535,8 +463,80 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v12.6.upd3.html" class="md-nav__link">
-        *Percona Distribution for PostgreSQL* 12.6 Third Update
+      <a href="release-notes-v12.6.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.6.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.6
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.5.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.5
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.4.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.4
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v12.2.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 12.2
       </a>
     </li>
   
@@ -634,7 +634,10 @@
                 
                 
                 <h1 id="pg_stat_monitor">pg_stat_monitor<a class="headerlink" href="#pg_stat_monitor" title="Permanent link">&para;</a></h1>
-<p><strong>NOTE</strong>: This is a technical preview feature and it is subject to further changes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a technical preview feature and it is subject to further changes.</p>
+</div>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><code>pg_stat_monitor</code> is a PostgreSQL Query Performance Monitoring
 tool. It collects statistics data and writes it in a storage unit called <em>bucket</em>. The data is added and stored in a bucket for the defined period – the bucket lifetime.</p>
@@ -651,31 +654,36 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
 </li>
 </ul>
 <p>When a bucket lifetime expires, <code>pg_stat_monitor</code> resets all statistics and writes the data in the next bucket in the chain. When the last bucket’s lifetime expires, <code>pg_stat_monitor</code> returns to the first bucket.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The contents of the bucket will be overwritten. In order not to lose the data, make sure to read the bucket before <code>pg_stat_monitor</code> starts writing new data to it.</p>
+</div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<p>After the installation, <code>pg_stat_monitor</code> requires additional setup in order to use it with PostgreSQL. The setup steps are the following:</p>
+<p>After the <a href="installing.html#install-percona-distribution-for-postgresql-packages">installation</a>, <code>pg_stat_monitor</code> requires additional setup in order to use it with PostgreSQL. The setup steps are the following:</p>
 <ol>
-<li>Add <code>pg_stat_monitor</code> in the <code>shared_preload_libraries</code> configuration parameter.</li>
-</ol>
-<p>The recommended way to modify PostgreSQL configuration file is using the <a href="https://www.postgresql.org/docs/12/sql-altersystem.html">ALTER SYSTEM</a> command. Connect to psql and use the following command:</p>
+<li>
+<p>Add <code>pg_stat_monitor</code> in the <code>shared_preload_libraries</code> configuration parameter.</p>
+<p>The recommended way to modify PostgreSQL configuration file is using the <a href="https://www.postgresql.org/docs/12/sql-altersystem.html">ALTER SYSTEM</a> command. Connect to <code>psql</code> and use the following command:</p>
 <div class="highlight"><pre><span></span><code>$ ALTER SYSTEM SET shared_preload_libraries = &#39;pg_stat_monitor&#39;;
 </code></pre></div>
 <p>The parameter value is written to the <code>postgresql.auto.conf</code> file which is read in addition with <code>postgresql.conf</code> file.</p>
-<ol>
+</li>
 <li>
 <p>Start or restart the PostgreSQL instance to enable <code>pg_stat_monitor</code>. Use the following command for restart:</p>
 <ul>
 <li>On Debian and Ubuntu:</li>
 </ul>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl restart postgresql.service
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>* On Red Hat Enterprise Linux and CentOS:
-</code></pre></div>
+<ul>
+<li>On Red Hat Enterprise Linux and CentOS:</li>
+</ul>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl restart postgresql-12
 </code></pre></div>
-<ol>
-<li>Create the extension. Connect to <code>psql</code> and use the following command:</li>
+</li>
+<li>
+<p>Create the extension. Connect to <code>psql</code> and use the following command:</p>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code>$ CREATE EXTENSION pg_stat_monitor;
 </code></pre></div>
@@ -749,7 +757,7 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
  postgres | postgres | SELECT c.relchecks, c.relkind, c.relhasindex, c.r |     1 | 127.0.0.1
  postgres | postgres | SELECT  userid,  total_time, min_time, max_time,  |     1 | 127.0.0.1
 </code></pre></div>
-<p>Find more usage examples  in <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_7_0_STABLE/docs/USER_GUIDE.md">pg_stat_monitor User Guide</a>.</p>
+<p>Find more usage examples  in <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_0_STABLE/docs/USER_GUIDE.md">pg_stat_monitor User Guide</a>.</p>
 <h2 id="changing-the-configuration">Changing the configuration<a class="headerlink" href="#changing-the-configuration" title="Permanent link">&para;</a></h2>
 <p>Run the following query to list available configuration parameters.</p>
 <div class="highlight"><pre><span></span><code>$ SELECT name,description FROM pg_stat_monitor_settings;
@@ -769,13 +777,13 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
  pg_stat_monitor.pgsm_respose_time_step        | Sets the response time steps in millisecond.
  pg_stat_monitor.pgsm_query_shared_buffer      | Sets the query shared_buffer size.
 </code></pre></div>
-<p>You can change a parameter by setting a new value in the configuration file. Some parameters require server restart to apply a new value. For others, configuration reload is enough. Refer to the <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_7_0_STABLE/docs/USER_GUIDE.md#configuration">configuration section</a> of the <code>pg_stat_monitor</code> documentation for the parameters’ description, how you can change their values and if the server restart is required to apply them.</p>
+<p>You can change a parameter by setting a new value in the configuration file. Some parameters require server restart to apply a new value. For others, configuration reload is enough. Refer to the <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_0_STABLE/docs/USER_GUIDE.md#configuration">configuration section</a> of the <code>pg_stat_monitor</code> documentation for the parameters’ description, how you can change their values and if the server restart is required to apply them.</p>
 <p>As an example, let’s set the bucket lifetime from default 60 seconds to 100 seconds. Use the <strong>ALTER SYSTEM</strong> command:</p>
 <div class="highlight"><pre><span></span><code>$ ALTER SYSTEM set pg_stat_monitor.pgsm_bucket_time = 100;
 </code></pre></div>
 <p>Restart the server to apply the change:</p>
 <ul>
-<li>On Debia and Ubuntu</li>
+<li>On Debian and Ubuntu</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$ sudo systemctl restart restart postgresql.service
 </code></pre></div>
