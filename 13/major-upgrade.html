@@ -482,6 +482,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.2.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2 Third Update
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -569,8 +581,8 @@ The in-place upgrade means installing a new version without removing the old ver
 <p><a href="https://www.postgresql.org/docs/13/pgupgrade.html">https://www.postgresql.org/docs/13/pgupgrade.html</a></p>
 </div>
 <p>Similar to installing, we recommend you to upgrade Percona Distribution for PostgreSQL from Percona repositories.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>A major upgrade is a risky process because of many changes between versions and issues that might occur during or after the upgrade. Therefore, make sure to back up your data first. The backup tools are out of scope of this document. Use the backup tool of your choice.</p>
 </div>
 <p>The general in-place upgrade flow for Percona Distribution for PostgreSQL is the following:</p>
@@ -771,8 +783,11 @@ $ exit
 <li>Install Percona Distribution for PostgreSQL 13:</li>
 </ul>
 <div class="highlight"><pre><span></span><code>$ sudo yum install percona-postgresql13-server
-$ #Install components
-$ sudo yum install percona-pgaudit
+</code></pre></div>
+<ul>
+<li>Install components:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo yum install percona-pgaudit
 $ sudo yum install percona-pgbackrest
 $ sudo yum install percona-pg_repack13
 $ sudo yum install percona-patroni
@@ -793,7 +808,7 @@ $ sudo yum install percona-postgresql13-contrib
 <p><a href="https://www.percona.com/doc/percona-repo-config/index.html">Percona Software Repositories Documentation</a></p>
 </li>
 <li>
-<p><a href="#installing.html">Installing Percona Distribution for PostgreSQL</a></p>
+<p><a href="#installing.md">Installing Percona Distribution for PostgreSQL</a></p>
 </li>
 </ul>
 </div>

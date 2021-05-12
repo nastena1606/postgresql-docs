@@ -430,6 +430,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.2.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2 Third Update
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -647,7 +659,7 @@ depending on the package manager of your operating system).</p>
 <p>Install <code>pg_repack</code>:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get install percona-postgresql-13-repack
 </code></pre></div>
-<p>Install <code>pgaudit</code>:</p>
+<p>Install <code>pgAudit</code>:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get install percona-postgresql-13-pgaudit
 </code></pre></div>
 <p>Install <code>pgBackRest</code>:</p>
@@ -678,7 +690,7 @@ depending on the package manager of your operating system).</p>
 <p>Install PostgreSQL contrib extensions:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get install percona-postgresql-contrib
 </code></pre></div>
-<p>Some extensions require additional setup in order to use them with Percona Distribution for PostgreSQL. For more information, refer to enabling.</p>
+<p>Some extensions require additional setup in order to use them with Percona Distribution for PostgreSQL. For more information, refer to <a href="#enabling-extensions">Enabling extensions</a>.</p>
 <h4 id="starting-the-service">Starting the service<a class="headerlink" href="#starting-the-service" title="Permanent link">&para;</a></h4>
 <p>The installation process automatically initializes the default database. Thus, to start Percona Distribution for PostgreSQL, use the following command:</p>
 <div class="highlight"><pre><span></span><code>$ sudo pg_ctlcluster 13 main start

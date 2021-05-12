@@ -466,6 +466,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.2.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2 Third Update
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -539,8 +551,11 @@ extensions that enable solving essential practical tasks efficiently:</p>
 PostgreSQL database objects</p>
 </li>
 <li>
-<p><a href="https://www.pgaudit.org/">pgaudit</a> provides detailed session or object
+<p><a href="https://www.pgaudit.org/">pgAudit</a> provides detailed session or object
 audit logging via the standard PostgreSQL logging facility</p>
+</li>
+<li>
+<p><a href="https://github.com/pgaudit/set_user">pgAudit set_user</a> - The <code>set_user</code> part of <code>pgAudit</code> extension provides an additional layer of logging and control when unprivileged users must escalate themselves to superuser or object owner roles in order to perform needed maintenance tasks.</p>
 </li>
 <li>
 <p><a href="https://pgbackrest.org/">pgBackRest</a> is a backup and restore solution for
@@ -551,6 +566,15 @@ PostgreSQL</p>
 </li>
 <li>
 <p><a href="https://github.com/percona/pg_stat_monitor">pg_stat_monitor</a> (Tech Preview Feature <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>) collects and aggregates statistics for PostgreSQL and provides histogram information.</p>
+</li>
+<li>
+<p><a href="https://www.pgbouncer.org/">PgBouncer</a> - a lightweight connection pooler for PostgreSQL</p>
+</li>
+<li>
+<p><a href="https://github.com/darold/pgbadger">pgBadger</a> - a fast PostgreSQL Log Analyzer.</p>
+</li>
+<li>
+<p><a href="https://github.com/eulerto/wal2json">wal2json</a> - a PostgreSQL logical decoding JSON output plugin.</p>
 </li>
 <li>
 <p>A collection of <a href="https://www.postgresql.org/docs/13/contrib.html">additional PostgreSQL contrib extensions</a></p>
@@ -567,7 +591,7 @@ PostgreSQL</p>
 </ul>
 </div>
 <p>Percona Distribution for PostgreSQL is also shipped with the
-<a href="https://www.postgresql.org/docs/11/libpq.html">libpq</a> library. It
+<a href="https://www.postgresql.org/docs/13/libpq.html">libpq</a> library. It
 contains &ldquo;a set of library functions that allow client programs to pass
 queries to the PostgreSQL backend server and to receive the results of
 these queries.&rdquo; <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
@@ -583,7 +607,7 @@ these queries.&rdquo; <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</
 <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
 <p><a href="release-notes">Release notes</a></p>
 <h1 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h1>
-<p><a href="licensing">Licening</a></p>
+<p><a href="licensing">Licensing</a></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -608,7 +632,7 @@ from tech preview to GA.&#160;<a class="footnote-backref" href="#fnref:1" title=
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-21
+      Last update: 2021-04-28
     
   </small>
 </div>
