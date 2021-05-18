@@ -632,16 +632,16 @@ so the system is usable.</p>
 <ul>
 <li>Install the components:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>$ sudo apt-get install percona-postgresql-13-repack
-$ sudo apt-get install percona-postgresql-13-pgaudit
-$ sudo apt-get install percona-pgbackrest
-$ sudo apt-get install percona-patroni
-$ sudo apt-get install percona-pgbadger
-$ sudo apt-get install percona-pgaudit13-set-user
-$ sudo apt-get install percona-pgbadger
-$ sudo apt-get install percona-postgresql-13-wal2json
-$ sudo apt-get install percona-pg-stat-monitor13
-$ sudo apt-get install percona-postgresql-contrib
+<div class="highlight"><pre><span></span><code>$ sudo apt-get install percona-postgresql-13-repack \
+ percona-postgresql-13-pgaudit \
+ percona-pgbackrest \
+ percona-patroni \
+ percona-pgbadger \
+ percona-pgaudit13-set-user \
+ percona-pgbadger \
+ percona-postgresql-13-wal2json \
+ percona-pg-stat-monitor13 \
+ percona-postgresql-contrib
 </code></pre></div>
 <div class="admonition seealso">
 <p class="admonition-title">Seealso</p>
@@ -739,10 +739,15 @@ $ port = 5432 # Change to 5433 here
 </li>
 <li>
 <p>Check the <code>postgresql</code> version.</p>
-<div class="highlight"><pre><span></span><code>$ #Log in as a postgres user
-$ sudo su postgres
-$ #Check the database version
-$ psql -c &quot;SELECT version();&quot;
+<ul>
+<li>Log in as a postgres user</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ sudo su postgres
+</code></pre></div>
+<ul>
+<li>Check the database version</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ psql -c &quot;SELECT version();&quot;
 </code></pre></div>
 </li>
 <li>
@@ -787,16 +792,16 @@ $ exit
 <ul>
 <li>Install components:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>$ sudo yum install percona-pgaudit
-$ sudo yum install percona-pgbackrest
-$ sudo yum install percona-pg_repack13
-$ sudo yum install percona-patroni
-$ sudo yum install percona-pg-stat-monitor13
-$ sudo yum install percona-pgbadger
-$ sudo yum install percona-pgaudit13_set_user
-$ sudo yum install percona-pgbadger
-$ sudo yum install percona-wal2json13
-$ sudo yum install percona-postgresql13-contrib
+<div class="highlight"><pre><span></span><code>$ sudo yum install percona-pgaudit \
+percona-pgbackrest \
+percona-pg_repack13 \
+percona-patroni \
+percona-pg-stat-monitor13 \
+percona-pgbadger \
+percona-pgaudit13_set_user \
+percona-pgbadger \
+percona-wal2json13 \
+percona-postgresql13-contrib
 </code></pre></div>
 </li>
 </ol>
@@ -815,13 +820,21 @@ $ sudo yum install percona-postgresql13-contrib
 <ol>
 <li>
 <p>Set up Percona Distribution for PostgreSQL 13 cluster</p>
-<div class="highlight"><pre><span></span><code>$ #Log is as the postgres user
-$ sudo su postgres
-$ #Set up locale settings
-$ export LC_ALL=&quot;en_US.UTF-8&quot;
-$ export LC_CTYPE=&quot;en_US.UTF-8&quot;
-$ #Initialize cluster with the new data directory
-$ /usr/pgsql-13/bin/initdb -D /var/lib/pgsql/13/data
+</li>
+<li>
+<p>Log is as the postgres user</p>
+<div class="highlight"><pre><span></span><code>sudo su postgres
+</code></pre></div>
+</li>
+<li>
+<p>Set up locale settings</p>
+<div class="highlight"><pre><span></span><code>export LC_ALL=&quot;en_US.UTF-8&quot;
+export LC_CTYPE=&quot;en_US.UTF-8&quot;
+</code></pre></div>
+</li>
+<li>
+<p>Initialize cluster with the new data directory</p>
+<div class="highlight"><pre><span></span><code>/usr/pgsql-13/bin/initdb -D /var/lib/pgsql/13/data
 </code></pre></div>
 </li>
 <li>
