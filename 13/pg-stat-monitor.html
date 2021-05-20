@@ -439,8 +439,8 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v13.0.html" class="md-nav__link">
-        Percona Distribution for PostgreSQL 13.0
+      <a href="release-notes-v13.3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.3
       </a>
     </li>
   
@@ -451,32 +451,8 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v13.1.html" class="md-nav__link">
-        Percona Distribution for PostgreSQL 13.1
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v13.2.html" class="md-nav__link">
-        Percona Distribution for PostgreSQL 13.2
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="release-notes-v13.2.upd.html" class="md-nav__link">
-        Percona Distribution for PostgreSQL 13.2 Update
+      <a href="release-notes-v13.2.upd3.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2 Third Update
       </a>
     </li>
   
@@ -499,8 +475,44 @@
   
   
     <li class="md-nav__item">
-      <a href="release-notes-v13.2.upd3.html" class="md-nav__link">
-        Percona Distribution for PostgreSQL 13.2 Third Update
+      <a href="release-notes-v13.2.upd.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2 Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.2.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.1.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="release-notes-v13.0.html" class="md-nav__link">
+        Percona Distribution for PostgreSQL 13.0
       </a>
     </li>
   
@@ -721,7 +733,7 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
  postgres | postgres | SELECT c.relchecks, c.relkind, c.relhasindex, c.r |     1 | 127.0.0.1
  postgres | postgres | SELECT  userid,  total_time, min_time, max_time,  |     1 | 127.0.0.1
 </code></pre></div>
-<p>Find more usage examples  in <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_0_STABLE/docs/USER_GUIDE.md">pg_stat_monitor User Guide</a>.</p>
+<p>Find more usage examples  in <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_1_STABLE/docs/USER_GUIDE.md">pg_stat_monitor User Guide</a>.</p>
 <h2 id="changing-the-configuration">Changing the configuration<a class="headerlink" href="#changing-the-configuration" title="Permanent link">&para;</a></h2>
 <p>Run the following query to list available configuration parameters.</p>
 <div class="highlight"><pre><span></span><code>$ SELECT name,description FROM pg_stat_monitor_settings;
@@ -741,7 +753,7 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
  pg_stat_monitor.pgsm_respose_time_step        | Sets the response time steps in millisecond.
  pg_stat_monitor.pgsm_query_shared_buffer      | Sets the query shared_buffer size.
 </code></pre></div>
-<p>You can change a parameter by setting a new value in the configuration file. Some parameters require server restart to apply a new value. For others, configuration reload is enough. Refer to the <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_0_STABLE/docs/USER_GUIDE.md#configuration">configuration section</a> of the <code>pg_stat_monitor</code> documentation for the parameters’ description, how you can change their values and if the server restart is required to apply them.</p>
+<p>You can change a parameter by setting a new value in the configuration file. Some parameters require server restart to apply a new value. For others, configuration reload is enough. Refer to the <a href="https://github.com/percona/pg_stat_monitor/blob/REL0_9_1_STABLE/docs/USER_GUIDE.md#configuration">configuration section</a> of the <code>pg_stat_monitor</code> documentation for the parameters’ description, how you can change their values and if the server restart is required to apply them.</p>
 <p>As an example, let’s set the bucket lifetime from default 60 seconds to 100 seconds. Use the <strong>ALTER SYSTEM</strong> command:</p>
 <div class="highlight"><pre><span></span><code>$ ALTER SYSTEM set pg_stat_monitor.pgsm_bucket_time = 100;
 </code></pre></div>
@@ -779,7 +791,7 @@ tool. It collects statistics data and writes it in a storage unit called <em>buc
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-04-28
+      Last update: 2021-05-18
     
   </small>
 </div>
