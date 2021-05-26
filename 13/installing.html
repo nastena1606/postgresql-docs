@@ -18,7 +18,7 @@
     
     
       
-        <title>Installation and Upgrade - Percona Distribution for PostgreSQL</title>
+        <title>Installing Percona Distribution for PostgreSQL - Percona Distribution for PostgreSQL</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation and Upgrade
+              Installing Percona Distribution for PostgreSQL
             
           </span>
         </div>
@@ -258,7 +258,7 @@
       <label class="md-nav__link" for="__nav_2">
         <span class="md-nav__icon md-icon"></span>
         
-          <a href="installing.html" class="md-nav__link md-nav__link--active"
+          <a href="installation-and-update.html" class="md-nav__link"
             style="margin: initial; padding: initial; pointer-events: initial">
         
           Installation and Upgrade
@@ -268,13 +268,165 @@
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           
-            <a href="installing.html" class="md-nav__link md-nav__link--active"
+            <a href="installation-and-update.html" class="md-nav__link"
               style="margin: initial; padding: initial; pointer-events: initial">
           
             Installation and Upgrade
           </a>
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-nav__icon md-icon"></span>
+          
+            <a href="installing.html" class="md-nav__link md-nav__link--active"
+              style="margin: initial; padding: initial; pointer-events: initial">
+          
+            Installing Percona Distribution for PostgreSQL
+          </a>
+        </label>
+      
+      <a href="installing.html" class="md-nav__link md-nav__link--active">
+        Installing Percona Distribution for PostgreSQL
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repositories-overview" class="md-nav__link">
+    Repositories overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-percona-release" class="md-nav__link">
+    Install percona-release
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable-the-repository" class="md-nav__link">
+    Enable the repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-percona-distribution-for-postgresql-packages" class="md-nav__link">
+    Install Percona Distribution for PostgreSQL packages
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Percona Distribution for PostgreSQL packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-debian-and-ubuntu-using-apt" class="md-nav__link">
+    On Debian and Ubuntu using apt
+  </a>
+  
+    <nav class="md-nav" aria-label="On Debian and Ubuntu using apt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-notes" class="md-nav__link">
+    Platform Specific Notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-service" class="md-nav__link">
+    Starting the service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-red-hat-enterprise-linux-and-centos-using-yum" class="md-nav__link">
+    On Red Hat Enterprise Linux and CentOS using yum
+  </a>
+  
+    <nav class="md-nav" aria-label="On Red Hat Enterprise Linux and CentOS using yum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-notes_1" class="md-nav__link">
+    Platform Specific Notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-service_1" class="md-nav__link">
+    Starting the service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-extensions" class="md-nav__link">
+    Enabling extensions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-the-postgresql-server" class="md-nav__link">
+    Connect to the PostgreSQL server
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
           
             
   
@@ -313,10 +465,47 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        <span class="md-nav__icon md-icon"></span>
+        
+          <a href="extensions.html" class="md-nav__link"
+            style="margin: initial; padding: initial; pointer-events: initial">
+        
+          Extensions
+        </a>
+      </label>
+      <nav class="md-nav" aria-label="Extensions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          
+            <a href="extensions.html" class="md-nav__link"
+              style="margin: initial; padding: initial; pointer-events: initial">
+          
+            Extensions
+          </a>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="pg-stat-monitor.html" class="md-nav__link">
-        Extensions
+        pg_stat_monitor
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -469,7 +658,7 @@
   
     <li class="md-nav__item">
       <a href="licensing.html" class="md-nav__link">
-        Reference
+        Licensing
       </a>
     </li>
   
@@ -839,7 +1028,7 @@ log_error_verbosity = default
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="index.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="installation-and-update.html" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -848,7 +1037,7 @@ log_error_verbosity = default
               <span class="md-footer__direction">
                 Previous
               </span>
-              Percona Distribution for PostgreSQL 13 Documentation
+              Installation and Upgrade
             </div>
           </div>
         </a>
