@@ -1,6 +1,6 @@
 
 Markdown
-mkdocs == 3.2.1
+mkdocs == 1.2.3
 mkdocs-versioning
 mkdocs-macros-plugin
 mkdocs-exclude
