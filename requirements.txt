@@ -1,6 +1,6 @@
 
 Markdown
-mkdocs
+mkdocs == 1.2.3
 mkdocs-versioning
 mkdocs-macros-plugin
 mkdocs-exclude
@@ -12,4 +12,4 @@ mkdocs-material-extensions
 mkdocs-bootstrap-tables-plugin
 mkdocs-section-index
 mkdocs-htmlproofer-plugin
-mike
+mike == 1.1.2
